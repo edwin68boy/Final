@@ -17,12 +17,71 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Home", "Indexs", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+            <div class="navbar-collapse collapse right">
+                <ul class="nav navbar-nav ">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Mantenimientos <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="about-us">
+                            <li>@Html.ActionLink("Empleados", "Create", "Empleadoes")</li>
+
+                            <li>@Html.ActionLink("Departamentos", "Create", "Departamentoes")</li>
+
+                            <li>@Html.ActionLink("Cargos", "Create", "Cargoes")</li>
+
+
+                        </ul>
+                    </li>
+
+
+                </ul>
+                <ul class="nav navbar-nav ">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Procesos <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="about-us">
+                            <li>@Html.ActionLink("Calculo De Nomina", "Create", "Nominas")</li>
+
+                            <li>@Html.ActionLink("Salida de empleados", "Create", "Salida_Empleados")</li>
+
+                            <li>@Html.ActionLink("Vacaciones", "Create", "Vacaciones")</li>
+
+                            <li>@Html.ActionLink("Permisos", "Create", "Permisoes")</li>
+
+                            <li>@Html.ActionLink("Licencias", "Create", "Licencias")</li>
+
+                        </ul>
+                    </li>
+
+
+                </ul>
+                <ul class="nav navbar-nav ">
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Informes <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="about-us">
+                            <li>@Html.ActionLink("Nominas", "Index", "Nominas")</li>
+
+                            <li>@Html.ActionLink("Empleados Activos", "ActiveClients", "Empleadoes")</li>
+
+                            <li>@Html.ActionLink("Empleados Inactivos", "InactiveClient", "Empleadoes")</li>
+
+                            <li>@Html.ActionLink("Departamentos", "Index", "Departamentoes")</li>
+
+                            <li>@Html.ActionLink("Cargos", "Index", "Cargoes")</li>
+
+                            <li>@Html.ActionLink("Entradas De Empleados Por Mes", "Index", "Salida_Empleados")</li>
+
+                            <li>@Html.ActionLink("Salida De Empleados Por Mes", "Index", "Salida_Empleados")</li>
+
+                            <li>@Html.ActionLink("Permisos", "Index", "Permisoes")</li>
+
+                        </ul>
+                    </li>
+
+
                 </ul>
             </div>
+
         </div>
     </div>
 
@@ -33,8 +92,11 @@
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
-
+    @RenderSection("scripts", required: false)
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+
 </body>
 </html>

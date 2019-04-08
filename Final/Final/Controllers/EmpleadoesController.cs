@@ -14,7 +14,7 @@ namespace Final.Controllers
     {
         private DatabaseEntities db = new DatabaseEntities();
 
-        public ActionResult ActiveClients()
+        public ActionResult ActiveClients(string option, string search)
         {
             var empleados = db.Empleados.Where(e => e.Estatus == true);
             if (option == "Nombre")
