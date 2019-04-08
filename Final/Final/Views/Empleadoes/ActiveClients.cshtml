@@ -4,14 +4,16 @@
 }
 
 <h2>Empleados Activos</h2>
-@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+@using (Html.BeginForm("ActiveClients", "Empleadoes", FormMethod.Get))
 {
 
-    <b> Search Option: </b> @Html.RadioButton("option", "Name") <text>Name</text>
+    <b> Search Option: </b>
 
     @Html.RadioButton("option", "Nombre") <text> Nombre </text>
 
     @Html.RadioButton("option", "Departamento")<text>Departamento</text> @Html.TextBox("search")
+
+    @*@Html.TextBox("Searching")<input type="submit" value="Search"/>*@
 
     <input type="submit" name="submit" value="Buscar" />
 }

@@ -16,33 +16,38 @@ namespace Final.Controllers
 
         public ActionResult ActiveClients(string option, string search)
         {
+            //return View(db.Empleados.Where(x => x.Nombre.Contains(searching) || searching == null).ToList());
+            //return View(db.Empleados.Where(x => x.Nombre.Contains(search)|| search == null ).ToList());
             var empleados = db.Empleados.Where(e => e.Estatus == true);
             if (option == "Nombre")
             {
                 //Index action method will return a view with a student records based on what a user specify the value in textbox  
-                return View(db.Empleados.Where(x => x.Nombre == search && x.Estatus == true || search == null && x.Estatus == true).ToList());
+                return View(db.Empleados.Where(x => x.Nombre.Contains(search) && x.Estatus == true || search == null && x.Estatus == true).ToList());
             }
+           // else if (option == "Departamento")
+           // {
+                //var query = db.Empleados.Join(db.Departamentos, emp => emp.Departamento,
+                //dep => dep.Id,(emp,dep)=>new {db }    )
+                //return View(db.Departamentos.Select(c => c.Empleados) && db.Empleados.Where(c.Departamentos == search || search == null).ToList());
+                //return View(db.Empleados.Where(x => x.Departamentos.Contains(search) && x.Estatus == true || search == null && x.Estatus == true).ToList())
+           // }
             else
             {
                 return View(empleados.ToList());
             }
-            //else if (option == "Departamento")
-            //{
-            //    //return View( db.Departamentos.Select(c => c.Empleados) && db.Empleados.Where(c.Departamentos == search || search == null).ToList());
-            //}
             //else
             //{
             //    //return View(db.Students.Where(x = > x.Name.StartsWith(search) || search == null).ToList());
             //}
         }
 
-        public ActionResult InMonth(DateTime month)
-        {
-            var empleados = db.Empleados.Where(e => e.Fecha_Ingreso == );
+        //public ActionResult InMonth(DateTime month)
+        //{
+        //    var empleados = db.Empleados.Where(e => e.Fecha_Ingreso == );
 
 
-            return View(empleados.ToList());
-        }
+        //    return View(empleados.ToList());
+        //}
 
         public ActionResult InactiveClient()
         {

@@ -15,9 +15,12 @@ namespace Final.Controllers
         private DatabaseEntities db = new DatabaseEntities();
 
         // GET: Nominas
-        public ActionResult Index()
+        
+        public ActionResult Index(int? searching, int? seaching1)
         {
-            return View(db.Nominas.ToList());
+            //DateTime time = DateTime.Parse(searching);
+            return View(db.Nominas.Where(x => x.Fecha.Month == searching && x.Fecha.Year == seaching1).ToList());
+            //return View(db.Nominas.ToList());
         }
 
         // GET: Nominas/Details/5

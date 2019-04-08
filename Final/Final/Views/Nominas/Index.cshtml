@@ -5,6 +5,17 @@
 }
 
 <h2>Nomina Total</h2>
+@using (Html.BeginForm("Index", "Nominas", FormMethod.Get))
+{
+
+    <b> Mes: </b>
+    @Html.TextBox("Searching")<input type="submit" value="Search" />
+    <b> Año: </b>
+    @Html.TextBox("Searching1")<input type="submit" value="Search" />
+
+
+}
+
 
 <p>
     @Html.ActionLink("Agregar", "Create")
@@ -28,7 +39,7 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Monto_Total)
-                
+
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
@@ -49,7 +60,7 @@
     <script type="text/javascript">
         $(function () {
 
-            $('.datepicker').datepicker({ dateFormat: "mm-dd-yy" });
+            $('.datepicker').datepicker({ dateFormat: "mm" });
         })
     </script>
 }
