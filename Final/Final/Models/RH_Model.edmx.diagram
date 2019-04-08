@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4f88e8f4125940e0b5bb94c1fc66e52b" Name="Diagram1">
+        <EntityTypeShape EntityType="DatabaseModel.Cargo" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Departamento" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Empleado" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Licencia" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Nomina" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Permiso" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Salida_Empleados" Width="1.5" PointX="8.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Tipo_Salida" Width="1.5" PointX="6" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Vacacione" Width="1.5" PointX="5.25" PointY="12.125" IsExpanded="true" />
+        <AssociationConnector Association="DatabaseModel.FK_Empleados_Cargo" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Empleados_Departamento" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Permisos_Empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Salida_Empleados_Empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Table_empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Vacaciones_empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Salida_Empleados_Salida" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

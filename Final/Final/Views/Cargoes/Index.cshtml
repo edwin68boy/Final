@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Final.Models.Cargo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Agregar", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Cargos
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre_Cargo)
+        </td>
+        <td>
+            @Html.ActionLink("editar", "Edit", new { id=item.Id }) |
+            
+            @Html.ActionLink("Borrar", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
