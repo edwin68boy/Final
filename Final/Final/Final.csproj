@@ -205,6 +205,7 @@
     <Content Include="Views\Vacaciones\Index.cshtml" />
     <Content Include="Views\Empleadoes\ActiveClients.cshtml" />
     <Content Include="Views\Empleadoes\InactiveClient.cshtml" />
+    <Content Include="Views\Empleadoes\InMonth.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />

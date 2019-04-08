@@ -36,6 +36,14 @@ namespace Final.Controllers
             //}
         }
 
+        public ActionResult InMonth(DateTime month)
+        {
+            var empleados = db.Empleados.Where(e => e.Fecha_Ingreso == );
+
+
+            return View(empleados.ToList());
+        }
+
         public ActionResult InactiveClient()
         {
             var empleados = db.Empleados.Where(e => e.Estatus == false);

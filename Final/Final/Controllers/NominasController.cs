@@ -38,6 +38,14 @@ namespace Final.Controllers
         // GET: Nominas/Create
         public ActionResult Create()
         {
+            ViewBag.TotalEmpleados = (from a in db.Empleados
+                                      where a.Estatus == true
+                                      select a.Salario).Count();
+
+            ViewBag.TotalSalario = (from a in db.Empleados
+                                    where a.Estatus == true
+                                    select a.Salario).Sum();
+
             return View();
         }
 
