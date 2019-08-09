@@ -17,10 +17,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Home", "Indexs", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("OneData", "Indexs", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse right">
-                <ul class="nav navbar-nav ">
+            <div class="navbar-collapse collapse top-right">
+                <ul class="nav navbar-nav navbar-right ">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Mantenimientos <span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="about-us">
@@ -36,7 +36,7 @@
 
 
                 </ul>
-                <ul class="nav navbar-nav ">
+                <ul class="nav navbar-nav navbar-right ">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Procesos <span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="about-us">
@@ -55,7 +55,7 @@
 
 
                 </ul>
-                <ul class="nav navbar-nav ">
+                <ul class="nav navbar-nav navbar-right ">
                     <li class="dropdown">
                         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Informes <span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="about-us">
@@ -88,8 +88,10 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        <footer style="position:absolute; bottom:0; width:100%; height:60px;">
+            <hr />
+            <p>&copy; @DateTime.Now.Year - OneCode inc Software</p>
+            <p></p>
         </footer>
     </div>
     @RenderSection("scripts", required: false)
